@@ -16,6 +16,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    //생성자를 통해 memberRepository 주입
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }

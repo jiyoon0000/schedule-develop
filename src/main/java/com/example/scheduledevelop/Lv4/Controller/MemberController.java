@@ -21,6 +21,7 @@ public class MemberController {
 
     private final MemberService memberService;
 
+    //memberservice를 받기 위한 생성자
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }

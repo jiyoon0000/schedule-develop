@@ -41,12 +41,13 @@ public class MemberController {
     }
 
     //유저 삭제 API
-    //id로 특정 유저 조회 후 삭제
-    //삭제 시 200OK 상태 반환
+    //반환할 데이터가 없으니까 void 사용
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMember(@PathVariable Long id){
-        memberService.deleteMember(id);
 
+        //id로 특정 유저 조회 후 삭제
+        //삭제 시 200OK 상태 반환
+        memberService.deleteMember(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

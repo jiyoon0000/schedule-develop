@@ -31,6 +31,16 @@ public class MemberService {
                 ));
     }
 
+    //유저 로그인
+    //이메일과 비밀번호로 유저를 찾음
+    //인증 실패한 경우 401 UNAUTHORIZED 반환
+    public Member findByEmailAndPassword(String email, String password){
+        return memberRepository.findByEmailAAndPassword(email,password)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.UNAUTHORIZED,"Wrong email or password"
+                ));
+    }
+
     //유저 삭제
     //id로 유저를 조회 후 삭제
     public void deleteMember(Long id){

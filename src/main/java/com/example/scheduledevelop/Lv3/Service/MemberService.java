@@ -35,7 +35,7 @@ public class MemberService {
     //이메일과 비밀번호로 유저를 찾음
     //인증 실패한 경우 401 UNAUTHORIZED 반환
     public Member findByEmailAndPassword(String email, String password){
-        return memberRepository.findByEmailAAndPassword(email,password)
+        return memberRepository.findByEmailAndPassword(email,password)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.UNAUTHORIZED,"Wrong email or password"
                 ));

@@ -13,7 +13,12 @@ import org.springframework.web.server.ResponseStatusException;
 @RequiredArgsConstructor
 
 public class MemberService {
+
     private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
 
     //새로운 유저 생성
     //이름, 이메일, 비밀번호를 가지고 생성

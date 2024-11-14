@@ -10,6 +10,7 @@ import jakarta.persistence.*;
 public class Member extends BaseEntity {
 
     @Id
+    //기본키 자동 생성
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -19,7 +20,8 @@ public class Member extends BaseEntity {
     @Column(nullable = false, unique = true)
     private String username;
 
-    @Column(nullable = false)
+    //회원가입 기능추가를 위해 이메일도 중복을 허용하지 않게함.
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)

@@ -3,7 +3,7 @@ package com.example.scheduledevelop.Lv1.Entity;
 import jakarta.persistence.*;
 
 //schedule이 데이터베이스의 테이블과 매핑됨
-@Entity
+@Entity(name = "Lv1schedule")
 @Table(name = "schedule")
 
 //BaseEntity를 상속받아 생성일, 수정일 필드가 포함되어 있다.

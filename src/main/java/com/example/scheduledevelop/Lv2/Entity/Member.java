@@ -2,7 +2,7 @@ package com.example.scheduledevelop.Lv2.Entity;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "Lv2member")
 //member 테이블과 매핑
 @Table(name = "member")
 

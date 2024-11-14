@@ -21,11 +21,6 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    //memberservice를 받기 위한 생성자
-    public MemberController(MemberService memberService) {
-        this.memberService = memberService;
-    }
-
     //새로운 유저 생성 API
     //request로 받은 username, email, password로 새로운 유저 생성
     @PostMapping("/signup")

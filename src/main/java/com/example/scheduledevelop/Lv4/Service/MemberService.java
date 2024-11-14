@@ -16,11 +16,6 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    //생성자를 통해 memberRepository 주입
-    public MemberService(MemberRepository memberRepository){
-        this.memberRepository = memberRepository;
-    }
-
     //새로운 유저 생성
     //이름, 이메일, 비밀번호를 가지고 생성
     public Member createMember(String username, String email, String password){

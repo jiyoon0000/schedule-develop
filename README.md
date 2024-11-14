@@ -14,9 +14,10 @@ https://documenter.getpostman.com/view/39376424/2sAY55ayAZ
 
 ----
 ## Lv1. 일정 CRUD
-
-
-
+### 일정을 저장, 조회, 수정, 삭제할 수 있다.
+### 일정이 가지는 필드
+#### 작성 유저명, 할일 제목, 할일 내용, 작성일, 수정일
+##### 작성/수정일 필드는 JPA Auditing 활용
 ----
 ## Lv2. 유저 CRUD
 

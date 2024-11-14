@@ -46,7 +46,7 @@ public class ScheduleService {
 
     //일정 삭제
     //id로 schedule 조회 후 조회한 schedule 삭제
-    public Schedule deleteSchedule(Long id){
+    public void deleteSchedule(Long id){
         Schedule schedule = getSchedule(id);
         scheduleRepository.delete(schedule);
     }

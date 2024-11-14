@@ -1,15 +1,15 @@
-package com.example.scheduledevelop.Lv2.Service;
+package com.example.scheduledevelop.Lv3.Service;
 
-import com.example.scheduledevelop.Lv2.Entity.Schedule;
-import com.example.scheduledevelop.Lv2.Repository.ScheduleRepository;
+import com.example.scheduledevelop.Lv3.Entity.Schedule;
+import com.example.scheduledevelop.Lv3.Repository.ScheduleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-//Lv2 프로파일에서만 활성화
-@Profile("Lv2")
+//Lv3 프로파일에서만 활성화
+@Profile("Lv3")
 @Service
 //final 필드의 생성자를 자동으로 생성해주는 Lombok 어노테이션
 @RequiredArgsConstructor

@@ -1,7 +1,6 @@
 package com.example.scheduledevelop.Lv7.Entity;
 
 import com.example.scheduledevelop.Lv3.Entity.Member;
-import com.example.scheduledevelop.Lv3.Entity.Schedule;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -51,6 +50,9 @@ public class Comment {
         this.content = content;
         this.user = user;
         this.schedule = schedule;
+    }
+
+    public Comment(String content, com.example.scheduledevelop.Lv7.Entity.Member member, com.example.scheduledevelop.Lv7.Entity.Schedule schedule) {
     }
 
     //댓글내용 업데이트

@@ -1,15 +1,15 @@
 # CH3. 일정관리 앱 Develop
 
 ## Lv0. API 명세서 및 ERD 작성
-### API 명세서 작성 - postman 사용
+### API 명세서 작성 - postman 사용 (필수레벨)
 https://documenter.getpostman.com/view/39376424/2sAY55ayAZ
 
 ----
-### ERD 작성 - DB diagram 사용
+### ERD 작성 - DB diagram 사용 (필수레벨)
 <img width="1098" alt="스크린샷 2024-11-14 오전 10 00 15" src="https://github.com/user-attachments/assets/cdbe71ab-2a2f-4535-8bf0-c1c28636da20">
 
 ----
-### SQL 작성
+### SQL 작성 (필수레벨)
 #### root 경로의 schedule.sql에 생성
 ```
 -- User 테이블
@@ -73,3 +73,17 @@ CREATE TABLE SCHEDULE(
 ### 2. 프로젝트를 분석하고 예외사항 지정
 #### - 할일 제목은 10글자 이내, 유저명은 4글자 이내
 ##### - @pattern을 사용해서 회원가입 email 데이터 검증, 정규표현식 적용 (구현못함)
+
+----
+## Lv6. 비밀번호 암호화 (구현 못함)
+### 1. Lv3에서 추가한 비밀번호를 암호화
+#### -암호화를 위한 passwordEncoder를 직접 만들어 사용
+
+----
+## Lv7. 댓글 CRUD
+### 1. 생성한 일정에 댓글을 남길 수 있음
+#### - 댓글과 일정은 연관관계를 가짐
+
+### 2. 댓글을 저장, 조회, 수정, 삭제할 수 있다.
+### 3. 댓글이 가지는 필드
+#### -댓글 내용, 작성일, 수정일, 유저 고유 식별자, 일정 고유 식별자

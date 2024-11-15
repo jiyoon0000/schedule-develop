@@ -3,9 +3,11 @@ package com.example.scheduledevelop.Lv4.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 //Spring 설정 클래스 어노테이션
 @Configuration
+@Profile("Lv4")
 public class WebConfig {
 
     //LoginFilter를 애플리케이션에 등록하는 메서드

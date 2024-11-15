@@ -15,20 +15,12 @@ public class LoginFilter implements Filter {
             ServletRequest request,
             ServletResponse response,
             FilterChain chain
-    )
-        throws IOException, ServletException{
+    ) throws IOException, ServletException{
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
         //요청된 URL 경로를 가져옴
         String requestURI = httpRequest.getRequestURI();
-        //특정 경로는 세션 검사 없이 통과
-        if(requestURI.equals("/members/signup") || requestURI.equals("/members/login")){
-            //다음 필터 또는 서블릿으로 요청을 전달해준다.
-            chain.doFilter(request,response);
-            //세션 검사 종료
-            return;
-        }
 
         //모든 쿠키를 가져옴
         Cookie[] cookies = httpRequest.getCookies();

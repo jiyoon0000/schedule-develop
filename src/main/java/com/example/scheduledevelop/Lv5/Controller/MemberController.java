@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -24,7 +25,7 @@ public class MemberController {
     //새로운 유저 생성 API
     //request로 받은 username, email, password로 새로운 유저 생성
     @PostMapping("/signup")
-    public ResponseEntity<Member> createMember(@RequestBody MemberRequestDto requestDto){
+    public ResponseEntity<Member> createMember(@Validated @RequestBody MemberRequestDto requestDto){
         Member member = memberService.createMember(
                 requestDto.getUsername(),
                 requestDto.getEmail(),

@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @Profile("Lv5")
@@ -21,7 +22,7 @@ public class ScheduleController {
 
     //일정 생성 API
     @PostMapping
-    public ResponseEntity<Schedule> createSchedule(@RequestBody ScheduleRequestDto requestDto){
+    public ResponseEntity<Schedule> createSchedule(@Validated @RequestBody ScheduleRequestDto requestDto){
 
         //title, contents를 사용해 일정 생성
         Schedule schedule =

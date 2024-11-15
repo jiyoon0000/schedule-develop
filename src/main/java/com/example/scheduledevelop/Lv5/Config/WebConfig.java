@@ -1,5 +1,6 @@
-package com.example.scheduledevelop.Lv5.Filter;
+package com.example.scheduledevelop.Lv5.Config;
 
+import com.example.scheduledevelop.Lv5.Filter.LoginFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
